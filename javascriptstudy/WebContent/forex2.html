@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- /Webcontent/forex2.html -->
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>입력받은 숫자까자의 합 구하기</title>
+<script type="text/javascript">
+	function sum(){
+		end	=num.value; //id 속성값
+		tot=0;
+			for(var i=1;i<=end;i++){
+				tot+=i;
+	}
+	result.value=tot;
+	}
+</script>
+
+</head>
+<body>
+1부터
+<input type="text" id="num">
+<input type="button" value="=" onclick="sum()">		<!-- on 이 붙어 있으면 무조건 이벤트 -->
+<input type="text" id="result"><br>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+function getNumber(){		//0~9 임의의 정수
+	return Math.floor(Math.random()*1000)%10;
+}
+ var op = new Array("+","-","*","/");	//배열
+ 
+ function getOp(){
+	 return op[Math.floor(Math.random()*4)];
+ }
+ tot=0;
+ cnt=0;
+ while(true){
+ str=getNumber()+getOp()+getNumber();
+ ans=prompt(str+"= 식의 정답을 입력하세요(종료:9999)",0) //기본값(초기화) 설정
+ res=eval(str);
+ if(ans==9999)break;
+  	if(res !=ans){
+  		document.write("입력한 값:"+ans);
+  		document.write("<font color='red' size='5'>틀렸습니다.</font>")
+  		document.write("정답:"+res+"<br>");
+  		
+  		} else{
+  			document.write("<font color='blue' size='7'> 정답입니다.</font><br>")
+  			cnt++;
+  		}
+  	tot++;
+  	
+ }
+document.write("총 "+tot+"문제 중 "+cnt+"개 맞쳤습니다.")
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- /WebContent/ttsex1.html -->
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Text to Speech</title>
+<script type="text/javascript">
+var msg= new SpeechSynthesisUtterandce();	//TTS객체.
+function setlang(t){
+	msg.lang=t;	//언어설정
+}
+	function ttsTest(){
+		msg.text= intext.value;	//id=intext 태그의 value 값
+		speechSynthesis.speak(msg);
+	}
+</script>
+</head>
+<body>
+<textarea rows="10" cols="100" id="intext"> 안녕하세요</textarea>
+<input type="button" onclick="setlang('ko_KR');ttsTest()" value="읽기">	<!-- ;을 표시해 한줄 읽음 -->
+<br>
+</body>
+</html>

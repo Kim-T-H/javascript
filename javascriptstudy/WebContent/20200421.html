@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>구구단 과제</title>
+<style type="text/css">
+	table {width:100%;border-collapse:collapse;}
+	th,td{border: 3px solid #bcbcbc;
+		text-align:center; padding:8px;}
+	th{background-color:#e2e2e2; color:#111111;}
+	td{background-color:#f2f2f2;}
+	caption{
+	color:#111111; font-size:20px; background-color:#f2f2f2;}
+</style>
+<script type="text/javascript">
+ function gugudan1(){
+	 var html="<table><caption>구구단</caption>";
+	 for(var i=2; i<=9; i++){
+		 html += "<tr><th>"+i+"단</th></tr>";
+		 for(var j=2; j<=9;j++){
+			 html += "<tr><td>"+i+"*"+j+"="+(i*j)+"</td></tr>";
+		 }
+	 }
+	 html+="</table>"
+	 console.log(html)
+	 result.innerHTML= html;
+ }
+ function gugudan2(){
+	 var html="<table><caption>구구단</caption>";
+	 
+	
+		  for(j=1;j<=9;j++){
+		   html+="<tr>"
+		   for(i=2;i<=9;i++){
+		    if(j==1){
+		     html += "<th>"+i+"단</th>"
+		    }
+		    else{
+		     html +="<td>"+i+"*"+j+"="+(j*i)+"</td>"
+		    }
+		   }
+		   html+="</tr>"
+		  }
+	
+	 html+="</table>"
+	 console.log(html)
+	 result.innerHTML= html;
+ }
+ 
+ function gugudan3(){
+	 var html="<table><caption>구구단</caption>";
+	 
+	
+		  for(j=1;j<=9;j++){
+		   html+="<tr>"
+		   for(i=2;i<=5;i++){
+		    if(j==1){
+		     html += "<th>"+i+"단</th>"
+		    }
+		    else{
+		     html +="<td>"+i+"*"+j+"="+(j*i)+"</td>"
+		    }
+		   }
+		   html+="</tr>"
+		  }
+		  
+		  for(j=1;j<=9;j++){
+			   html+="<tr>"
+			   for(i=6;i<=9;i++){
+			    if(j==1){
+			     html += "<th>"+i+"단</th>"
+			    }
+			    else{
+			     html +="<td>"+i+"*"+j+"="+(j*i)+"</td>"
+			    }
+			   }
+			   html+="</tr>"
+			  }
+	
+	 html+="</table>"
+	 console.log(html)
+	 result.innerHTML= html;
+ }
+ 
+
+ 
+</script>
+</head>
+<body>
+
+<input type="button" value="세로 출력" onclick="gugudan1()">
+<input type="button" value="가로 출력" onclick="gugudan2()">
+<input type="button" value="가로 출력" onclick="gugudan3()">
+
+<div id="result"></div>
+
+</body>
+</html>
